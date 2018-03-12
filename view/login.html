@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SmartGarçom</title>
+    <link rel="shortcut icon" href="img/smart.ico" >
+
+		<!-- materialize -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+    <style>
+        #img {
+            text-align: center;
+            width: auto;
+            height: auto;
+        }
+
+        img {
+            height: 15.0rem;
+        }
+
+    </style>
+  </head>
+  <body>
+
+		<h3 class="center-align">Smart Garçom</h3>
+    <div id="img" class="container center-align">
+        <img src="img/login.png">
+    </div>
+
+		<div class="containercenter-align">
+
+        <form id="frm-login" name="frm-login" method="POST" class="container center-align" action="../controller/cLogin.php">
+            
+            <div class="row center-align">
+				<div class="input-field col l6 offset-l3 s10 offset-s1">
+				    <input id="usulog" name="usulog" type="text" class="validate">
+				    <label for="email">E-mail</label>
+				</div>
+            </div>
+            
+			<div class="row center-align">
+				<div class="input-field col l6 offset-l3 s10 offset-s1">
+				    <input id="usupsw" name="usupsw" type="password" class="validate">
+				    <label for="password">Senha</label>
+				</div>
+            </div>
+
+            <div class="row center-align">
+                <button id="entrar" name="entrar" type="submit">Entrar
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+  </body>
+</html>

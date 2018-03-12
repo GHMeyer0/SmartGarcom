@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html ng-app="">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Cardapio</title>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/menu.css">
+
+	</head>
+
+	<body>
+
+		<div ng-include="'menutop-mesa.html'"></div>
+		<h2>Lanches</h2>
+		<div class="container">
+			<div class="col-md-3 item-xs">
+				<div>
+					<h3>X-Simples</h3>
+					<img src="img/simples.png" class="img img-subcar img-rounded">
+				</div>
+				<div class="btn-group-vertical btn-sub">
+					<button type="button" class="btn btn-primary btn-sub" data-toggle="modal" data-target="#x-simples">Detalhe</button>
+				</div>
+			</div>
+
+			<div class="col-md-3 item-xs">
+				<div>
+					<h3>X-Bacon</h3>
+					<img src="img/bacon.png" class="img img-subcar img-rounded">
+				</div>
+				<div class="btn-group-vertical btn-sub">
+					<button type="button" class="btn btn-primary btn-sub" data-toggle="modal" data-target="#x-bacon">Detalhe</button>
+				</div>
+			</div>
+
+			<div class="col-md-3 item-xs">
+				<div>
+					<h3>X-Galinha</h3>
+					<img src="img/galinha.png" class="img img-subcar img-rounded">
+				</div>
+				<div class="btn-group-vertical btn-sub">
+
+					<button type="button" class="btn btn-primary btn-sub" data-toggle="modal" data-target="#myModal">Detalhe</button>
+				</div>
+			</div>
+
+			<div class="col-md-3 item-xs">
+				<div>
+					<h3>X-Tudo</h3>
+					<img src="img/tudo.png" class="img img-subcar img-rounded">
+				</div>
+				<div class="btn-group-vertical btn-sub">
+
+					<button type="button" class="btn btn-primary btn-sub" data-toggle="modal" data-target="#x-tudo">Detalhe</button>
+				</div>
+			</div>
+
+			<div class="col-md-3 item-xs">
+				<div>
+					<h3>Bauru</h3>
+					<img src="img/mistoquente.png" class="img img-subcar img-rounded">
+				</div>
+				<div class="btn-group-vertical btn-sub">
+
+					<button type="button" class="btn btn-primary btn-sub" data-toggle="modal" data-target="#myModal">Detalhe</button>
+				</div>
+			</div>
+
+			<div class="col-md-3 item-xs">
+				<div>
+					<h3>Misto Quente</h3>
+					<img src="img/bauru.png" class="img img-subcar img-rounded">
+				</div>
+				<div class="btn-group-vertical btn-sub">
+
+					<button type="button" class="btn btn-primary btn-sub" data-toggle="modal" data-target="#myModal">Detalhe</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="x-simples" role="dialog">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">X-Simples</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-group">
+							<h4>Descrição:</h4> Pão, Hamburguer, alface e tomate
+							<h4>Valor:</h4> R$ 2,00
+							<h4>Quantidade:</h4>
+							<input class="form-control qtd" value="1">
+							<h4>Complementos:</h4>
+							<textarea class="form-control" placeholder="Adicionais ou ingrediente para retirar do lanche/porção"></textarea>
+
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-success" data-dismiss="modal">Adicionar ao pedido</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="x-bacon" role="dialog">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">X-Bacon</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-group">
+							<h4>Descrição:</h4> Pão, Hamburguer, alface, tomate, bacon
+							<h4>Valor:</h4> R$ 10,00
+							<h4>Quantidade:</h4>
+							<input class="form-control qtd" value="1">
+							<h4>Complementos:</h4>
+							<textarea class="form-control" placeholder="Adicionais ou ingrediente para retirar do lanche/porção"></textarea>
+
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-success" data-dismiss="modal">Adicionar ao pedido</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade " id="x-tudo" role="dialog">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">X-Tudo</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-group">
+							<h4>Descrição:</h4> Pão, Hamburguer, e tudo mais
+							<h4>Valor:</h4> R$ 12,00
+							<h4>Quantidade:</h4>
+							<input class="form-control qtd" value="1">
+							<h4>Complementos:</h4>
+							<textarea class="form-control" placeholder="Adicionais ou ingrediente para retirar do lanche/porção"></textarea>
+
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-success" data-dismiss="modal">Adicionar ao pedido</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="jquery/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="angular/angular.js"></script>
+		<script type="text/javascript">
+		</script>
+	</body>
+
+</html>

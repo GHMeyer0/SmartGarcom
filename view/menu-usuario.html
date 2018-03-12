@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html ng-app="">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>SmartGarçom</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/menu.css">
+		<style>
+			.glyphicon-ok-sign {
+				color: forestgreen;
+			}
+
+			.glyphicon-remove-sign {
+				color: red;
+			}
+
+			.glyphicon-time {
+				color: orange;
+			}
+			button span{
+				margin: auto;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div ng-include="'menutop-mesa.html'"></div>
+
+		<div class="container-fluid">
+
+			<div class="btn-block">
+				<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='cardapio.html'">Cardapio</button>
+			</div>
+		</div>
+		<h2>Pedidos</h2>
+		<div class="container-fluid">
+			<div class="container table-responsive jumbotron">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Nr. Pedido</th>
+							<th>Hora</th>
+							<th>Status</th>
+							<th width=10>Editar/Excluir</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr>
+							<td>000004</td>
+							<td>21:00</td>
+							<td><span class="glyphicon glyphicon-edit"></span></td>
+							<td class="btn-group btn-group-sm">
+								<button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>
+								<button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+							</td>
+
+						</tr>
+						<tr>
+							<td>000003</td>
+							<td>21:05</td>
+							<td><span class="glyphicon glyphicon-time"></span></td>
+							<td class="btn-group btn-group-sm">
+								<button type="button" data-toggle="modal" data-target="#wait" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>
+								<button class="btn btn-danger disabled"><span class="glyphicon glyphicon-trash"></span></button>
+							</td>
+
+						</tr>
+						<tr>
+							<td>000002</td>
+							<td>20:00</td>
+							<td><span class="glyphicon glyphicon-ok-sign"></span></td>
+							<td class="btn-group btn-group-sm">
+								<button type="button" data-toggle="modal" data-target="#modal-chek" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>
+								<button class="btn btn-danger disabled"><span class="glyphicon glyphicon-trash"></span></button>
+							</td>
+
+						</tr>
+						<tr>
+							<td>000001</td>
+							<td>19:00</td>
+							<td><span class="glyphicon glyphicon-remove-sign"></span></td>
+							<td class="btn-group btn-group-sm">
+								<button type="button" data-toggle="modal" data-target="#modal-off" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>
+								<button class="btn btn-danger disabled"><span class="glyphicon glyphicon-trash"></span></button>
+							</td>
+
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+
+			<div class="modal fade " id="myModal" role="dialog">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Pedido 000004</h4>
+						</div>
+						<div class="modal-body container-fluid">
+							<table class="table table-striped jumbotrom table-bordered">
+								<thead>
+									<tr>
+										<th>Produto</th>
+										<th>Quantidade</th>
+										<th width="100">Editar/Excluir</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>X-Simples</td>
+										<td>1</td>
+										<td class="btn-group">
+											<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>
+											<button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+										</td>
+									</tr>
+									<tr>
+										<td>X-Tudo</td>
+										<td>1</td>
+										<td class="btn-group">
+											<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>
+											<button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+							<button type="button" class="btn btn-success btn-lg btn-block" class="close" data-dismiss="modal">Confirmar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade " id="wait" role="dialog">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Pedido 000003</h4>
+						</div>
+						<div class="modal-body container-fluid">
+							<table class="table table-striped jumbotrom table-bordered">
+								<thead>
+									<tr>
+										<th>Produto</th>
+										<th>Quantidade</th>
+										<th width="100">Editar/Excluir</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Cerverja Brahama Litrão</td>
+										<td>2</td>
+										<td class="btn-group ">
+											<button class="btn btn-primary disabled"><span class="glyphicon glyphicon-pencil"></span></button>
+											<button class="btn btn-danger disabled"><span class="glyphicon glyphicon-trash"></span></button>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+							<button type="button" class="btn btn-success disabled btn-lg btn-block" >Confirmar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade " id="modal-off" role="dialog">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Pedido 000001</h4>
+						</div>
+						<div class="modal-body container-fluid">
+							<table class="table table-striped jumbotrom table-bordered">
+								<thead>
+									<tr>
+										<th>Produto</th>
+										<th>Quantidade</th>
+										<th width="100">Editar/Excluir</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>X-Simples</td>
+										<td>1</td>
+										<td class="btn-group">
+											<button class="btn btn-primary disabled"><span class="glyphicon glyphicon-pencil"></span></button>
+											<button class="btn btn-danger disabled"><span class="glyphicon glyphicon-trash"></span></button>
+										</td>
+									</tr>
+									<tr>
+										<td>X-Tudo</td>
+										<td>1</td>
+										<td class="btn-group">
+											<button class="btn btn-primary disabled"><span class="glyphicon glyphicon-pencil"></span></button>
+											<button class="btn btn-danger disabled"><span class="glyphicon glyphicon-trash"></span></button>
+										</td>
+									</tr>
+									<tr>
+										<td>Guarana 2L</td>
+										<td>1</td>
+										<td class="btn-group">
+											<button class="btn btn-primary disabled"><span class="glyphicon glyphicon-pencil"></span></button>
+											<button class="btn btn-danger  disabled"><span class="glyphicon glyphicon-trash"></span></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<button type="button" class="btn btn-success btn-lg btn-block disabled" id="btn-adicionar">Confirmar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade " id="modal-chek" role="dialog">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Pedido 000002</h4>
+						</div>
+						<div class="modal-body container-fluid">
+							<table class="table table-striped jumbotrom table-bordered">
+								<thead>
+									<tr>
+										<th>Produto</th>
+										<th>Quantidade</th>
+										<th width="100">Editar/Excluir</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Coca-Cola 2L</td>
+										<td>1</td>
+										<td class="btn-group">
+											<button class="btn btn-primary disabled"><span class="glyphicon glyphicon-pencil"></span></button>
+											<button class="btn btn-danger disabled"><span class="glyphicon glyphicon-trash"></span></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<button type="button" class="btn btn-success btn-lg btn-block disabled" id="btn-adicionar">Confirmar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script src="jquery/jquery.min.js"></script>
+			<script src="bootstrap/js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="jquery/jquery.mask.min.js"></script>
+			<script type="text/javascript" src="angular/angular.js"></script>
+	</body>
+
+</html>

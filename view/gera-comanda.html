@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Nova Comanda</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/form.css">
+	</head>
+
+	<body>
+		<div ng-include="'menutop-mesa.html'"></div>
+		<div class="container-fluid">
+			<h2>Nova Comanda</h2>
+			<form id="frm-comanda" name="frm-comanda" method="post" class="jumbotron container-fluid form-group">
+				<div class="form-group">
+					<input id="usunom" name="usunom" type="text" class="form-control" placeholder="Nome Completo">
+					<h5>Data de Nacimento:</h5>
+					<input id="usudt_nas" name="usudt_nas" type="date" class="form-control" placeholder="Dt. Nasc">
+				</div>
+				<div class="btn-group-vertical col-xs-12 col-md-12">
+					<button type="button" class="btn btn-success col-xs-12 col-md-12" onclick="location.href='menu-usuario.html'">Confirmar</button>
+				</div>
+			</form>
+		</div>
+
+		<script src="jquery/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="jquery/jquery.mask.min.js"></script>
+		<script type="text/javascript" src="angular/angular.js"></script>
+		<script type="text/javascript">
+		</script>
+	</body>
+
+</html>

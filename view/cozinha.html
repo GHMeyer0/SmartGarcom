@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html ng-app="">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Cozinha</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/form.css">
+		<style>
+
+			.cod{
+				width: 3rem;
+			}
+			.produto{
+				width: 100rem;
+			}
+			.qtd{
+				width: 3rem;
+			}
+			.detalhe{
+				width: 300rem;
+			}
+
+
+
+		</style>
+	</head>
+
+	<body>
+		<div ng-include="'menutop.html'"></div>
+
+		<h2>Pedidos Pendentes</h2>
+
+		<div class="container">
+			<div class="row justify-content-around container">
+				<div class="col-4">
+					<div class="container table-responsive jumbotron">
+						<table class="table table-striped table-bordered">
+							<thead>
+								<tr>
+									<th colspan="2">Nr. Pedido: 0003</th>
+									<th colspan="3">Mesa: 10</th>
+
+								</tr>
+								<tr>
+									<th class="cod">Cod</th>
+									<th class="produto">Produto</th>
+									<th class="detalhe">Detalhes</th>
+									<th class="qtd">Quantidade</th>
+									<th width=50>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>1</th>
+									<th>X-Simples</th>
+									<th>Com maionese extra</th>
+									<th>1</th>
+									<th>
+										<select>
+											<option>Novo</option>
+											<option>Em andamento</option>
+											<option>Pronto</option>
+										</select>
+									</th>
+								</tr>
+								<tr>
+									<th>2</th>
+									<th>X-Tudo</th>
+									<th>Sem Alface</th>
+									<th>2</th>
+									<th>
+										<select>
+											<option>Novo</option>
+											<option>Em andamento</option>
+											<option>Pronto</option>
+										</select>
+									</th>
+								</tr>
+							</tbody>
+						</table>
+						<div class="btn-block btn-lg">
+							<button class="btn btn-block btn-success">Concluir Pedido</button>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-4 ">
+					<div class="container table-responsive jumbotron">
+						<table class="table table-striped table-bordered">
+							<thead>
+								<tr>
+									<th colspan="2">Nr. Pedido: 0004</th>
+									<th colspan="3">Mesa: 10</th>
+
+								</tr>
+								<tr>
+									<th class="cod">Cod</th>
+									<th class="produto">Produto</th>
+									<th class="detalhe">Detalhes</th>
+									<th class="qtd">Quantidade</th>
+									<th width=50>Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>3</th>
+									<th>Brahama Litrão</th>
+									<th>4 copos</th>
+									<th>1</th>
+									<th>
+										<select>
+											<option>Novo</option>
+											<option>Em andamento</option>
+											<option>Pronto</option>
+										</select>
+									</th>
+								</tr>
+						</tbody>
+					</table>
+						<div class="btn-block btn-lg">
+							<button class="btn btn-block btn-success">Concluir Pedido</button>
+						</div>
+				</div>
+			</div>
+		</div>
+			<script src="jquery/jquery.min.js"></script>
+			<script src="bootstrap/js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="jquery/jquery.mask.min.js"></script>
+			<script type="text/javascript" src="angular/angular.js"></script>
+	</body>
+
+</html>

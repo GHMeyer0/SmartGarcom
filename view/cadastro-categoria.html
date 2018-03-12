@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Categorias</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/form.css">
+		<script type="text/javascript">
+			var procod = 1;
+		</script>
+	</head>
+
+	<body>
+		<div ng-include="'menutop.html'"></div>
+		<div class="container-fluid">
+			<h2>Categorias</h2>
+			<div class="container">
+				<div class="btn-block btn">
+					<button type="button" id="show" ng-hide="show" ng-click="show=true" class="btn btn-info btn-block">Adicionar Categoria</button>
+				</div>
+				<form id="frm-cadcat" name="frm-cadpro" method="post" class="jumbotron container-fluid form-group" ng-show="show">
+					<div class="form-group">
+						<input id="procod" type="text" class="form-control" placeholder="Codigo" disabled>
+						<input id="pronom" type="text" class="form-control" placeholder="Nome da categoria">
+						<textarea class="form-control" rows="5" id="prodes" name="prodes" placeholder="Descrição da categoria (opicional)"></textarea>
+					</div>
+					<div class="btn-group btn-group-md col-xs-12 col-md-12">
+						<button type="button" class="btn btn-success col-xs-6 col-md-6" ng-click="show=false" id="btn-adicionar">Adicionar</button>
+						<button type="button" class="btn btn-danger col-xs-6 col-md-6" ng-click="show=false" id="btn-excluir">Excluir</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<table class="table table-striped table-bordered">
+				<thead>
+					<tr>
+						<th>Codigo</th>
+						<th>Nome da Categoria</th>
+						<th width=101>Editar/Excluir</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>001</th>
+						<th>Lanches</th>
+						<th>
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>
+							<button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+						</th>
+					</tr>
+					<tr>
+						<th>002</th>
+						<th>Bebidas</th>
+						<th>
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>
+							<button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+						</th>
+					</tr>
+					<tr>
+						<th>003</th>
+						<th>Porçoes</th>
+						<th>
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>
+							<button class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+						</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<script src="jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery/jquery.mask.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="angular/angular.js"></script>
+		<script type="text/javascript">
+			$('.money').mask('#.##0,00', {
+				reverse: true
+			});
+			$(document).ready(function() {
+				$('#procod').val(procod);
+			});
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="controle">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Cardapio</title>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/menu.css">
+	</head>
+
+	<body>
+		<div ng-include="'menutop-mesa.html'"></div>
+		<h2>Cardapio</h2>
+		<div class="container">
+			<div class="col-md-4 item-xs">
+				<div>
+					<img src="img/lanche.jpg" class="img img-car img-rounded">
+				</div>
+				<div>
+					<button type="button" class="btn btn-primary btn-car" onclick="location.href='lanches.html'">Lanches</button>
+				</div>
+			</div>
+			<div class="col-md-4 item-xs">
+				<div>
+					<img src="img/bebas.jpg" class="img img-car img-rounded">
+				</div>
+				<div>
+					<button type="button" class="btn btn-primary btn-car" onclick="location.href='bebidas.html'">Bebidas</button>
+				</div>
+			</div>
+			<div class="col-md-4 item-xs">
+				<div>
+					<img src="img/porcoes.jpg" class="img img-car img-rounded">
+				</div>
+				<div>
+					<button type="button" class="btn btn-primary btn-car">Porcões</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="jquery/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="jquery/jquery.mask.min.js"></script>
+		<script type="text/javascript" src="angular/angular.js"></script>
+		<script type="text/javascript" src="js/appControle.js"></script>
+	</body>
+
+</html>

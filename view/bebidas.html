@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bebidas</title>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/menu.css">
+
+	</head>
+
+	<body>
+		<div ng-include="'menutop-mesa.html'"></div>
+		<h2>Bebidas</h2>
+		<div class="container">
+			<div class="col-md-3 item-xs">
+				<div>
+					<h3>Brahma Garrafa 1L</h3>
+					<img src="img/brahmalitrao.png" class="img img-subcar img-rounded">
+				</div>
+				<div>
+					<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">Detalhe</button>
+				</div>
+			</div>
+
+			<div class="col-md-3 item-xs">
+				<div>
+					<h3>sucos</h3>
+					<img src="img/sucos.png" class="img img-subcar img-rounded">
+				</div>
+				<div>
+					<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">Detalhe</button>
+				</div>
+			</div>
+
+			<div class="col-md-3 item-xs">
+				<div>
+					<h3>Caipirinhas</h3>
+					<img src="img/caipirinhas.png" class="img img-subcar img-rounded">
+				</div>
+				<div>
+					<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">Detalhe</button>
+				</div>
+			</div>
+
+			<div class="col-md-3 item-xs">
+				<div>
+					<h3>Coca-Cola 1,5L</h3>
+					<img src="img/coca2litro.png" class="img img-subcar img-rounded">
+				</div>
+				<div>
+					<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">Detalhe</button>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="modal fade " id="myModal" role="dialog">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Brahma Litrão</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-group">
+							<h4>Descrição:</h4> Brahama bem gelada.
+							<h4>Valor:</h4> R$ 6,00
+							<h4>Quantidade:</h4>
+							<input class="form-control qtd" value="1">
+							<h4>Complementos:</h4>
+							<textarea class="form-control" placeholder="Quantidade de copos"></textarea>
+
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-success" data-dismiss="modal">Adicionar ao pedido</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="jquery/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="angular/angular.js"></script>
+
+	</body>
+
+</html>
